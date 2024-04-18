@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Parallel Stage') {
+            parallel {
+                stage('First Sub-stage') {
+                    steps {
+                        echo 'Running first sub-stage'
+                        // Your commands or steps here
+                    }
+                }
+                stage('Second Sub-stage') {
+                    steps {
+                        echo 'Running second sub-stage'
+                        // Your commands or steps here
+                    }
+                }
+                stage('Third Sub-stage') {
+                    steps {
+                        echo 'Running third sub-stage'
+                        // Your commands or steps here
+                    }
+                }
+            }
+        }
+    }
+}
